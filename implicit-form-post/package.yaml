@@ -1,0 +1,58 @@
+name:                implicit-form-post
+version:             0.1.0.0
+github:              "okta/samples-haskell-scotty"
+license:             Apache-2.0
+author:              Okta Developer Experience
+maintainer:          developers@okta.com
+copyright:           2018 Okta
+category:            Web
+build-type:          Simple
+
+extra-source-files:
+- README.md
+
+description:         Please see the README
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+  - aeson
+  - jose
+  - lens
+  - unordered-containers
+  - monad-time
+  - network-uri
+  - parsec
+  - bytestring
+  - http-conduit
+  - http-types
+  - scotty
+  - cookie
+  - binary
+  - text
+  - wai
+  - wai-extra
+  - wai-middleware-static
+  - warp
+  - time
+  - mtl
+  - lucid
+
+executables:
+  implicit-form-post-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - implicit-form-post
+    - lens
+    - warp
+    - optparse-applicative
+    - text

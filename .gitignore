@@ -1,0 +1,4 @@
+.stack-work/
+*~
+implicit-form-post.cabal
+Makefile

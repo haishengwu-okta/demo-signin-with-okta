@@ -1,0 +1,8 @@
+resolver: lts-8.4
+
+packages:
+  - './implicit-form-post'
+
+extra-deps:
+  - tasty-ant-xml-1.0.4
+  - mustache-2.1.2
